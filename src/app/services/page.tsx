@@ -67,7 +67,7 @@ export default function ServicesPage() {
         'Optional staining and sealing available',
         'Extends deck life and improves appearance'
       ],
-      image: '/services/deck-cleaning.jpg',
+      image: '/services/pr_6.png',
       pricing: {
         basic: 'Starting at $149',
         additional: 'Staining/sealing services priced separately'
@@ -99,7 +99,7 @@ export default function ServicesPage() {
         'Optional staining and sealing for wood fences',
         'Extends fence life and improves appearance'
       ],
-      image: '/services/fence-cleaning.jpg',
+      image: '/services/pr_5.png',
       pricing: {
         basic: 'Starting at $2.50 per linear foot',
         additional: 'Staining/sealing services priced separately'
@@ -118,7 +118,7 @@ export default function ServicesPage() {
         'Improves business appearance and customer impression',
         'Prevents long-term damage from dirt and organic growth'
       ],
-      image: '/services/commercial-exterior.jpg',
+      image: '/services/pr_7.png',
       pricing: {
         basic: 'Custom quotes based on building size',
         additional: 'Maintenance plans available'
@@ -135,7 +135,7 @@ export default function ServicesPage() {
         'Improves safety and appearance',
         'After-hours service available'
       ],
-      image: '/services/parking-lot.jpg',
+      image: '/services/pr_8.png',
       pricing: {
         basic: 'Custom quotes based on square footage',
         additional: 'Discounts for regular maintenance'
@@ -151,26 +151,26 @@ export default function ServicesPage() {
         'Improves business visibility and appeal',
         'Regular maintenance plans available'
       ],
-      image: '/services/storefront.jpg',
+      image: '/services/pr_9.png',
       pricing: {
         basic: 'Starting at $149',
         additional: 'Based on storefront size and features'
       }
     },
     {
-      id: 'restaurant',
-      name: 'Restaurant & Kitchen Cleaning',
-      description: 'Specialized cleaning for restaurant exteriors, patios, and kitchen exhaust areas.',
+      id: 'solar-panel',
+      name: 'Solar Panel Cleaning',
+      description: 'Maximize your solar energy production with our specialized solar panel cleaning service.',
       features: [
-        'Degreasing for kitchen exhaust areas',
-        'Patio and outdoor dining area cleaning',
-        'Complies with health department standards',
-        'Improves customer experience and safety'
+        'Increases energy production efficiency by up to 30%',
+        'Safe, no-scratch cleaning techniques',
+        'Removes dirt, pollen, bird droppings, and other debris',
+        'Regular maintenance plans available'
       ],
-      image: '/services/restaurant.jpg',
+      image: '/services/pr_10.png',
       pricing: {
-        basic: 'Custom quotes based on facility size',
-        additional: 'Regular maintenance plans available'
+        basic: 'Starting at $149',
+        additional: 'Based on system size and accessibility'
       }
     }
   ];
