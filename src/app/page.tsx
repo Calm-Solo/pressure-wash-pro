@@ -3,159 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Handle scroll effect for navigation
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <main className="min-h-screen">
-      {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
-      }`}>
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/pr_1.jpg"
-                alt="PressureWash Pro Logo"
-                width={50}
-                height={50}
-                className="rounded-full"
-              />
-              <span className={`ml-3 font-bold text-xl ${
-                isScrolled ? 'text-blue-900' : 'text-white'
-              }`}>
-                PressureWash Pro
-              </span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'Services', href: '/services' },
-                { name: 'Portfolio', href: '/portfolio' },
-                { name: 'Testimonials', href: '/testimonials' },
-                { name: 'Contact', href: '/contact' },
-              ].map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`font-medium transition-colors ${
-                    isScrolled 
-                      ? 'text-gray-700 hover:text-blue-600' 
-                      : 'text-white hover:text-blue-200'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Link
-                href="/quote"
-                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                  isScrolled
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-white text-blue-900 hover:bg-blue-50'
-                }`}
-              >
-                Get a Quote
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-6 w-6 ${isScrolled ? 'text-blue-900' : 'text-white'}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4">
-              <div className="flex flex-col space-y-3">
-                {[
-                  { name: 'Home', href: '/' },
-                  { name: 'Services', href: '/services' },
-                  { name: 'Portfolio', href: '/portfolio' },
-                  { name: 'Testimonials', href: '/testimonials' },
-                  { name: 'Contact', href: '/contact' },
-                ].map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`font-medium px-3 py-2 rounded-md ${
-                      isScrolled 
-                        ? 'text-gray-700 hover:bg-gray-100' 
-                        : 'text-white hover:bg-white/10'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-                <Link
-                  href="/quote"
-                  className={`px-3 py-2 rounded-md font-medium ${
-                    isScrolled
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'bg-white text-blue-900 hover:bg-blue-50'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get a Quote
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-
-      {/* Hero Section - Adjusted height and padding for navigation */}
-      <section className="relative min-h-[90vh] flex items-center pt-20">
-        {/* Background Image with Overlay - Modified fit */}
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center">
+        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/bg_1.jpg"

@@ -34,7 +34,7 @@ export default function ServicesPage() {
         'Removes mold, mildew, dirt, and algae',
         'Improves curb appeal and extends siding life'
       ],
-      image: '/services/pr_2.jpg',
+      image: '/services/pr_2.png',
       pricing: {
         basic: 'Starting at $199',
         additional: 'Price varies based on square footage and level of dirt/stains'
@@ -385,17 +385,17 @@ export default function ServicesPage() {
               {
                 title: "Commercial-Grade Pressure Washers",
                 description: "Our professional equipment delivers the right pressure for each surface, from gentle cleaning to high-pressure dirt removal.",
-                image: "/equipment/pressure-washer.jpg"
+                image: "/services/pr_11.png"
               },
               {
                 title: "Eco-Friendly Cleaning Solutions",
                 description: "We use biodegradable, environmentally safe cleaning solutions that are tough on dirt but gentle on your property and landscaping.",
-                image: "/equipment/cleaning-solutions.jpg"
+                image: "/services/pr_12.png"
               },
               {
                 title: "Surface-Specific Attachments",
                 description: "Specialized tools and attachments allow us to clean efficiently and effectively on any surface, from concrete to delicate siding.",
-                image: "/equipment/attachments.jpg"
+                image: "/services/pr_13.png"
               }
             ].map((item, index) => (
               <motion.div
