@@ -74,7 +74,7 @@ export default function QuotePage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Get Your Free Quote</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Fill out the form below and we'll get back to you with a customized quote for your pressure washing needs.
+            Fill out the form below and we&apos;ll get back to you with a customized quote for your pressure washing needs.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function QuotePage() {
                     <div className="text-green-500 text-6xl mb-6">✓</div>
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">Thank You!</h2>
                     <p className="text-gray-600 mb-8">
-                      Your quote request has been submitted successfully. We'll get back to you within 24 hours with a customized quote.
+                      Your quote request has been submitted successfully. We&apos;ll get back to you within 24 hours with a customized quote.
                     </p>
                     <Link 
                       href="/"

@@ -302,7 +302,7 @@ export default function PortfolioPage() {
                 <div className="mb-8">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Client Testimonial</h3>
                   <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                    <p className="italic text-gray-700 mb-4">"{activeProject.testimonial.quote}"</p>
+                    <p className="text-gray-700 italic mb-4">&quot;Before and after photos speak for themselves. The transformation is incredible!&quot;</p>
                     <div>
                       <p className="font-bold text-gray-900">{activeProject.testimonial.author}</p>
                       <p className="text-sm text-gray-500">{activeProject.testimonial.role}</p>
