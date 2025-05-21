@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type NavLink = {
   name: string;
@@ -18,6 +18,11 @@ export default function Navigation({ links = [] }: NavigationProps) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
+  // Close menu when path changes (navigation occurs)
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+  
   // Default links if none provided
   const navLinks = links.length > 0 ? links : [
     { name: 'Home', href: '/' },
@@ -26,8 +31,14 @@ export default function Navigation({ links = [] }: NavigationProps) {
     { name: 'Contact', href: '/contact' },
   ];
 
+  // Handle toggle with stopPropagation to prevent event bubbling
+  const handleToggleMenu = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsMenuOpen(prev => !prev);
+  };
+
   return (
-    <nav className="bg-blue-900 text-white fixed w-full z-10 shadow-md">
+    <nav className="bg-blue-900 text-white fixed w-full z-50 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -57,29 +68,33 @@ export default function Navigation({ links = [] }: NavigationProps) {
             ))}
           </div>
           
-          {/* Mobile Navigation Toggle */}
+          {/* Mobile Navigation Toggle - Make button larger for better tap target */}
           <div className="md:hidden">
             <button 
-              className="text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white p-2"
+              onClick={handleToggleMenu}
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
         </div>
         
-        {/* Mobile Menu Dropdown */}
+        {/* Mobile Menu Dropdown - Added higher z-index and improved transition */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 px-2 bg-blue-800 rounded-b-lg animate-fadeIn">
+          <div 
+            className="md:hidden py-4 px-2 bg-blue-800 rounded-b-lg animate-fadeIn absolute w-full left-0"
+            style={{ zIndex: 40 }}
+          >
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`block px-3 py-2 rounded-md hover:bg-blue-700 transition-colors ${
+                  className={`block px-3 py-3 rounded-md hover:bg-blue-700 transition-colors ${
                     pathname === link.href ? 'bg-blue-700 font-medium' : ''
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -89,7 +104,7 @@ export default function Navigation({ links = [] }: NavigationProps) {
               ))}
               <Link
                 href="/quote"
-                className="block px-3 py-2 bg-blue-600 text-white rounded-md text-center font-medium hover:bg-blue-500 transition-colors mt-2"
+                className="block px-3 py-3 bg-blue-600 text-white rounded-md text-center font-medium hover:bg-blue-500 transition-colors mt-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get a Quote

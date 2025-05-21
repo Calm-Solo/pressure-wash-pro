@@ -42,7 +42,7 @@ export default function TestimonialsPage() {
       role: 'Homeowner',
       location: 'Lakeside Neighborhood',
       image: '/services/sc_1.png',
-      quote: 'I couldn&apos;t believe the difference! My house looks like it was just painted, but it was just a thorough cleaning. The team was professional, on time, and did an amazing job. My neighbors have been stopping to ask who did the work. I&apos;ll definitely be using PressureWash Pro for regular maintenance from now on.',
+      quote: 'Amazing difference! My house looks like it was just painted, but it was just a thorough cleaning. The team was professional, on time, and did an amazing job. My neighbors have been stopping to ask who did the work. I&apos;ll definitely be using PressureWash Pro for regular maintenance from now on.',
       rating: 5,
       date: 'June 15, 2025',
       service: 'House Washing',
