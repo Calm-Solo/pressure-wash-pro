@@ -28,13 +28,13 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-4 z-10 relative">
+        <div className="container mx-auto px-4 z-10 relative pt-16 md:pt-0">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6"
+              className="mb-6 hidden md:block"
             >
               <Image
                 src="/pr_1.jpg"
@@ -45,11 +45,27 @@ export default function Home() {
               />
             </motion.div>
 
+            {/* Mobile-optimized smaller logo */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 md:hidden mt-10"
+            >
+              <Image
+                src="/pr_1.jpg"
+                alt="PressureWash Pro Logo"
+                width={100}
+                height={100}
+                className="rounded-full shadow-xl border-4 border-white"
+              />
+            </motion.div>
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight"
+              className="text-4xl md:text-6xl font-extrabold mb-6 text-white leading-tight"
             >
               Transform Your Property With Professional Pressure Washing
             </motion.h1>
