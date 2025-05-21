@@ -116,21 +116,33 @@ export default function Home() {
             {[
               {
                 title: "Residential",
-                description: "Complete exterior cleaning for homes, including siding, driveways, decks, and more.",
-                icon: "🏠",
-                link: "/services/residential"
+                description: "Restore your home's curb appeal with our comprehensive residential pressure washing services.",
+                icon: (
+                  <svg className="w-12 h-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                ),
+                link: "/services#residential"
               },
               {
                 title: "Commercial",
-                description: "Professional cleaning services for businesses, storefronts, and commercial properties.",
-                icon: "🏢",
-                link: "/services/commercial"
+                description: "Maintain a professional appearance for your business with our commercial pressure washing solutions.",
+                icon: (
+                  <svg className="w-12 h-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                ),
+                link: "/services#commercial"
               },
               {
                 title: "Specialty",
-                description: "Custom solutions including roof cleaning, fence restoration, and concrete sealing.",
-                icon: "✨",
-                link: "/services/specialty"
+                description: "From solar panels to delicate surfaces, our specialty cleaning services handle unique cleaning challenges.",
+                icon: (
+                  <svg className="w-12 h-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                ),
+                link: "/services#specialty"
               }
             ].map((service, index) => (
               <motion.div
@@ -139,16 +151,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-blue-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition"
+                className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-blue-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <div className="mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-blue-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
                 <Link
                   href={service.link}
-                  className="text-blue-600 font-semibold hover:text-blue-800 transition flex items-center"
+                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition"
                 >
-                  Learn more
+                  Learn More
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -177,12 +189,14 @@ export default function Home() {
               viewport={{ once: true }}
               className="rounded-xl overflow-hidden shadow-lg"
             >
-              <div className="relative h-80">
+              <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/hm_1.jpg" // Replace with a "before" image
+                  src="/hm_1.jpg"
                   alt="Before pressure washing"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
+                  style={{ objectPosition: 'center' }}
                 />
                 <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-lg font-bold">
                   BEFORE
@@ -197,12 +211,14 @@ export default function Home() {
               viewport={{ once: true }}
               className="rounded-xl overflow-hidden shadow-lg"
             >
-              <div className="relative h-80">
+              <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/hm_2.jpg" // Replace with an "after" image
+                  src="/hm_2.jpg"
                   alt="After pressure washing"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
+                  style={{ objectPosition: 'center' }}
                 />
                 <div className="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-lg font-bold">
                   AFTER

@@ -237,16 +237,17 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services List */}
-      <section className="py-16">
+      {/* Residential Services Section */}
+      <section id="residential" className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Residential Services</h2>
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {(activeTab === 'residential' ? residentialServices : commercialServices).map((service) => (
+            {residentialServices.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -300,6 +301,81 @@ export default function ServicesPage() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Commercial Services Section */}
+      <section id="commercial" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Commercial Services</h2>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {commercialServices.map((service) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col h-full relative"
+              >
+                {service.popular && (
+                  <div className="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                    POPULAR
+                  </div>
+                )}
+                <div className="relative h-64">
+                  <Image
+                    src={service.image}
+                    alt={service.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 flex-grow">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">{service.name}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
+                  <ul className="mb-6 space-y-2">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <svg className="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-gray-50 p-6 border-t border-gray-100">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="font-semibold text-gray-800">Pricing:</span>
+                    <span className="text-blue-600 font-bold">{service.pricing.basic}</span>
+                  </div>
+                  {service.pricing.additional && (
+                    <p className="text-sm text-gray-500">{service.pricing.additional}</p>
+                  )}
+                  <div className="mt-4">
+                    <Link
+                      href={`/quote?service=${service.id}`}
+                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-semibold transition"
+                    >
+                      Get a Quote
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Specialty Services Section */}
+      <section id="specialty" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Specialty Services</h2>
+          {/* Rest of specialty services content */}
         </div>
       </section>
 
@@ -390,12 +466,12 @@ export default function ServicesPage() {
               {
                 title: "Eco-Friendly Cleaning Solutions",
                 description: "We use biodegradable, environmentally safe cleaning solutions that are tough on dirt but gentle on your property and landscaping.",
-                image: "/services/pr_12.png"
+                image: "/services/pr_12.jpg"
               },
               {
                 title: "Surface-Specific Attachments",
                 description: "Specialized tools and attachments allow us to clean efficiently and effectively on any surface, from concrete to delicate siding.",
-                image: "/services/pr_13.png"
+                image: "/services/pr_13.jpg"
               }
             ].map((item, index) => (
               <motion.div
