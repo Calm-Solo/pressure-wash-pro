@@ -65,7 +65,7 @@ export default function TestimonialsPage() {
       name: 'Jennifer Williams',
       role: 'Property Manager',
       location: 'Westside Apartments',
-      image: '/testimonials/person3.jpg',
+      image: '/services/sc_7.png',
       quote: 'Managing multiple properties means I need reliable service providers. PressureWash Pro has been our go-to for all our exterior cleaning needs for the past 3 years. They\'re always professional, thorough, and provide excellent value. Our properties look well-maintained year-round thanks to their regular service.',
       rating: 5,
       date: 'May 22, 2025',
@@ -76,7 +76,7 @@ export default function TestimonialsPage() {
       name: 'David Chen',
       role: 'Homeowner',
       location: 'Sunny Acres Development',
-      image: '/testimonials/person4.jpg',
+      image: '/services/sc_3.png',
       quote: 'Our energy production increased by 25% after PressureWash Pro cleaned our solar panels! I had no idea how much dirt was affecting our system\'s performance. The team was knowledgeable about the proper techniques for cleaning solar panels without causing damage. Great service at a fair price.',
       rating: 5,
       date: 'August 10, 2023',
@@ -87,7 +87,7 @@ export default function TestimonialsPage() {
       name: 'Amanda Peterson',
       role: 'Homeowner',
       location: 'Oak Hills Estate',
-      image: '/testimonials/person5.jpg',
+      image: '/services/sc_6.png',
       quote: 'The driveway looks brand new! I didn\'t think those oil stains would ever come out, but your team made it happen. The concrete looks like it was just poured. Your attention to detail and thoroughness exceeded my expectations. I\'ve already recommended you to several neighbors.',
       rating: 5,
       date: 'April 18, 2025',
@@ -98,32 +98,10 @@ export default function TestimonialsPage() {
       name: 'Robert Thompson',
       role: 'HOA President',
       location: 'Riverside Community',
-      image: '/testimonials/person6.jpg',
+      image: '/services/sc_8.png',
       quote: 'We hired PressureWash Pro to clean all the common areas in our community, including sidewalks, entrance features, and community buildings. The transformation was remarkable. They were able to handle our large project efficiently and with minimal disruption to residents. We\'ve now set up a quarterly maintenance schedule.',
       rating: 5,
       date: 'March 5, 2025',
-      service: 'Commercial Cleaning'
-    },
-    {
-      id: 'testimonial-7',
-      name: 'Lisa Garcia',
-      role: 'Homeowner',
-      location: 'Maple Street',
-      image: '/testimonials/person7.jpg',
-      quote: 'Our wooden deck was looking gray and worn after years of weather exposure. PressureWash Pro not only cleaned it but also applied a protective sealant that brought out the natural beauty of the wood. It looks better than when it was first installed! The crew was friendly and cleaned up everything before they left.',
-      rating: 5,
-      date: 'July 28, 2025',
-      service: 'Deck Restoration'
-    },
-    {
-      id: 'testimonial-8',
-      name: 'James Wilson',
-      role: 'Store Manager',
-      location: 'Shopping Plaza',
-      image: '/testimonials/person8.jpg',
-      quote: 'The storefront and sidewalk outside our retail location had years of gum, dirt, and stains. PressureWash Pro made it look like new again! They were flexible with scheduling to minimize impact on our business hours. The improved appearance has actually helped attract more customers.',
-      rating: 5,
-      date: 'June 10, 2025',
       service: 'Commercial Cleaning'
     }
   ];
@@ -134,7 +112,7 @@ export default function TestimonialsPage() {
       id: 'video-1',
       name: 'The Andersons',
       role: 'Homeowners',
-      thumbnail: '/testimonials/video-thumb1.jpg',
+      thumbnail: '/services/sc_4.png',
       videoUrl: 'https://www.youtube.com/embed/your-video-id-1',
       duration: '1:45',
       featured: true
@@ -143,7 +121,7 @@ export default function TestimonialsPage() {
       id: 'video-2',
       name: 'Cornerstone Office Complex',
       role: 'Commercial Client',
-      thumbnail: '/testimonials/video-thumb2.jpg',
+      thumbnail: '/services/sc_5.png',
       videoUrl: 'https://www.youtube.com/embed/your-video-id-2',
       duration: '2:12'
     }

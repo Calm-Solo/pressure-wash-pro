@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 type NavLink = {
@@ -29,6 +30,13 @@ export default function Navigation({ links = [] }: NavigationProps) {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
+            <Image 
+              src="/pr_1.jpg" 
+              alt="PressureWash Pro Logo" 
+              width={40} 
+              height={40} 
+              className="rounded-full"
+            />
             <span className="font-bold text-xl">PressureWash Pro</span>
           </Link>
           
