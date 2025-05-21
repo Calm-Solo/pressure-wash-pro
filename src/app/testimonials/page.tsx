@@ -42,7 +42,7 @@ export default function TestimonialsPage() {
       role: 'Homeowner',
       location: 'Lakeside Neighborhood',
       image: '/services/sc_1.png',
-      quote: 'I couldn\'t believe the difference! My house looks like it was just painted, but it was just a thorough cleaning. The team was professional, on time, and did an amazing job. My neighbors have been stopping to ask who did the work. I\'ll definitely be using PressureWash Pro for regular maintenance from now on.',
+      quote: 'I couldn&apos;t believe the difference! My house looks like it was just painted, but it was just a thorough cleaning. The team was professional, on time, and did an amazing job. My neighbors have been stopping to ask who did the work. I&apos;ll definitely be using PressureWash Pro for regular maintenance from now on.',
       rating: 5,
       date: 'June 15, 2025',
       service: 'House Washing',
@@ -66,7 +66,7 @@ export default function TestimonialsPage() {
       role: 'Property Manager',
       location: 'Westside Apartments',
       image: '/services/sc_7.png',
-      quote: 'Managing multiple properties means I need reliable service providers. PressureWash Pro has been our go-to for all our exterior cleaning needs for the past 3 years. They\'re always professional, thorough, and provide excellent value. Our properties look well-maintained year-round thanks to their regular service.',
+      quote: 'Managing multiple properties means I need reliable service providers. PressureWash Pro has been our go-to for all our exterior cleaning needs for the past 3 years. They&apos;re always professional, thorough, and provide excellent value. Our properties look well-maintained year-round thanks to their regular service.',
       rating: 5,
       date: 'May 22, 2025',
       service: 'Commercial Cleaning'
@@ -77,7 +77,7 @@ export default function TestimonialsPage() {
       role: 'Homeowner',
       location: 'Sunny Acres Development',
       image: '/services/sc_3.png',
-      quote: 'Our energy production increased by 25% after PressureWash Pro cleaned our solar panels! I had no idea how much dirt was affecting our system\'s performance. The team was knowledgeable about the proper techniques for cleaning solar panels without causing damage. Great service at a fair price.',
+      quote: 'Our energy production increased by 25% after PressureWash Pro cleaned our solar panels! I had no idea how much dirt was affecting our system&apos;s performance. The team was knowledgeable about the proper techniques for cleaning solar panels without causing damage. Great service at a fair price.',
       rating: 5,
       date: 'August 10, 2023',
       service: 'Solar Panel Cleaning'
@@ -88,7 +88,7 @@ export default function TestimonialsPage() {
       role: 'Homeowner',
       location: 'Oak Hills Estate',
       image: '/services/sc_6.png',
-      quote: 'The driveway looks brand new! I didn\'t think those oil stains would ever come out, but your team made it happen. The concrete looks like it was just poured. Your attention to detail and thoroughness exceeded my expectations. I\'ve already recommended you to several neighbors.',
+      quote: 'The driveway looks brand new! I didn&apos;t think those oil stains would ever come out, but your team made it happen. The concrete looks like it was just poured. Your attention to detail and thoroughness exceeded my expectations. I&apos;ve already recommended you to several neighbors.',
       rating: 5,
       date: 'April 18, 2025',
       service: 'Driveway Cleaning'
@@ -99,7 +99,7 @@ export default function TestimonialsPage() {
       role: 'HOA President',
       location: 'Riverside Community',
       image: '/services/sc_8.png',
-      quote: 'We hired PressureWash Pro to clean all the common areas in our community, including sidewalks, entrance features, and community buildings. The transformation was remarkable. They were able to handle our large project efficiently and with minimal disruption to residents. We\'ve now set up a quarterly maintenance schedule.',
+      quote: 'We hired PressureWash Pro to clean all the common areas in our community, including sidewalks, entrance features, and community buildings. The transformation was remarkable. They were able to handle our large project efficiently and with minimal disruption to residents. We&apos;ve now set up a quarterly maintenance schedule.',
       rating: 5,
       date: 'March 5, 2025',
       service: 'Commercial Cleaning'
@@ -164,7 +164,7 @@ export default function TestimonialsPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Customer Testimonials</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Don't just take our word for it. See what our satisfied customers have to say about our pressure washing services.
+            Don&apos;t just take our word for it. See what our satisfied customers have to say about our pressure washing services.
           </p>
         </div>
       </section>
@@ -206,7 +206,7 @@ export default function TestimonialsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-gray-700 italic mb-4">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex justify-between items-center text-sm text-gray-500">
                   <span>{testimonial.service}</span>
                   <span>{testimonial.date}</span>
@@ -389,7 +389,7 @@ export default function TestimonialsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-blue-900 mb-6">Had a Great Experience?</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-            We appreciate your feedback! If you've used our services, please consider leaving a review to help others learn about your experience.
+            We appreciate your feedback! If you&apos;ve used our services, please consider leaving a review to help others learn about your experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

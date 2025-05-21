@@ -215,7 +215,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">What Our Customers Say</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say.
+              Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say.
             </p>
           </div>
 
@@ -230,7 +230,7 @@ export default function Home() {
               {
                 name: "Michael Rodriguez",
                 role: "Business Owner",
-                quote: "We've used PressureWash Pro for our storefront for years. Always professional, always excellent results.",
+                quote: "We&apos;ve used PressureWash Pro for our storefront for years. Always professional, always excellent results.",
                 rating: 5
               },
               {
@@ -255,7 +255,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
+                <p className="text-gray-600 italic mb-6">&quot;{testimonial.quote}&quot;</p>
                 <div>
                   <p className="font-bold text-blue-900">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>

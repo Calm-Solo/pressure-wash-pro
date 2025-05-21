@@ -66,7 +66,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Have questions or ready to schedule a service? We're here to help. Reach out to our team today.
+            We&apos;re here to help. Reach out to our team today.
           </p>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-2">Call Us</h3>
-              <p className="text-gray-600 mb-4">We're available Monday-Saturday, 8am-6pm</p>
+              <p className="text-gray-600 mb-4">We&apos;re available Monday-Saturday, 8am-6pm</p>
               <a href="tel:+15551234567" className="text-blue-600 font-semibold text-lg hover:text-blue-800 transition">
                 (555) 123-4567
               </a>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-4">We'll respond to your inquiry within 24 hours</p>
+              <p className="text-gray-600 mb-4">We&apos;ll respond to your inquiry within 24 hours</p>
               <a href="mailto:info@pressurewashpro.com" className="text-blue-600 font-semibold text-lg hover:text-blue-800 transition">
                 info@pressurewashpro.com
               </a>
@@ -164,7 +164,7 @@ export default function ContactPage() {
                       <div className="text-green-500 text-6xl mb-6">✓</div>
                       <h2 className="text-2xl font-bold text-gray-800 mb-4">Thank You!</h2>
                       <p className="text-gray-600 mb-8">
-                        Your message has been sent successfully. We'll get back to you as soon as possible.
+                        Your message has been sent successfully. We&apos;ll get back to you as soon as possible.
                       </p>
                       <Link 
                         href="/"
@@ -273,7 +273,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-bold mb-4">Get in Touch</h3>
                     <p className="text-blue-100 mb-8">
-                      We're here to answer any questions you have about our services, pricing, or scheduling.
+                      We&apos;re here to answer any questions you have about our services, pricing, or scheduling.
                     </p>
                     
                     <div className="space-y-4 mb-8">
@@ -328,7 +328,7 @@ export default function ContactPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-blue-900 mb-4">Find Us</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                We're conveniently located to serve the entire metro area.
+                We&apos;re conveniently located to serve the entire metro area.
               </p>
             </div>
             
