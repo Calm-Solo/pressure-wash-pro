@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 type NavLink = {
   name: string;
@@ -15,6 +16,7 @@ type NavigationProps = {
 
 export default function Navigation({ links = [] }: NavigationProps) {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // Default links if none provided
   const navLinks = links.length > 0 ? links : [
@@ -57,13 +59,44 @@ export default function Navigation({ links = [] }: NavigationProps) {
           
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden">
-            <button className="text-white">
+            <button 
+              className="text-white"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
         </div>
+        
+        {/* Mobile Menu Dropdown */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 px-2 bg-blue-800 rounded-b-lg animate-fadeIn">
+            <div className="flex flex-col space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`block px-3 py-2 rounded-md hover:bg-blue-700 transition-colors ${
+                    pathname === link.href ? 'bg-blue-700 font-medium' : ''
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Link
+                href="/quote"
+                className="block px-3 py-2 bg-blue-600 text-white rounded-md text-center font-medium hover:bg-blue-500 transition-colors mt-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get a Quote
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

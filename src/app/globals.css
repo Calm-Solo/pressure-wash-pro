@@ -27,3 +27,42 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  button, 
+  a.btn,
+  input[type="submit"],
+  input[type="button"],
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input, 
+  select, 
+  textarea {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+  
+  /* Add more spacing between elements */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  /* Improve form elements on mobile */
+  form .grid {
+    gap: 16px;
+  }
+}
+
+/* Add animation for mobile menu */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}

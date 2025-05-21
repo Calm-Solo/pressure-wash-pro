@@ -230,7 +230,7 @@ export default function Home() {
               {
                 name: "Michael Rodriguez",
                 role: "Business Owner",
-                quote: "We&apos;ve used PressureWash Pro for our storefront for years. Always professional, always excellent results.",
+                quote: "We used Pressure Wash Pro for our storefront for years. Always professional, always excellent results.",
                 rating: 5
               },
               {
